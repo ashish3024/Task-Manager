@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Task Board</h1>
+            <select id="filterStatus" onchange="fetchTasks()">
+                <option value="All">All Tasks</option>
+                <option value="Pending">Pending</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+            </select>
+        </header>
+
+        <div class="task-form">
+            <input type="text" id="taskTitle" placeholder="Task Title (Required)">
+            <textarea id="taskDesc" placeholder="Task Description (Optional)"></textarea>
+            <button onclick="addTask()">+ Add Task</button>
+        </div>
+
+        <ul id="taskList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

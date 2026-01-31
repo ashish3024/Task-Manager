@@ -1,0 +1,122 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Header & Filter */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Form Styling */
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, textarea, button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Task List Styling */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-details h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+
+.task-details p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.Pending { background: #ffeeba; color: #856404; }
+.In.Progress { background: #b8daff; color: #004085; } /* Dot handles space in class name */
+.Completed { background: #c3e6cb; color: #155724; }
+
+/* Responsive Design  */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
